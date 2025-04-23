@@ -3,7 +3,7 @@ A repo for team PAJ (Parijat, Alondra, Joanna) Hackathon Spring 2025
 
 🌸
 
-<strong>Hackathon Topic - <strong>
+<strong>Hackathon Topic - Retro<strong>
 <br>
 <strong>Project Description</strong>
 <p></p>
