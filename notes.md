@@ -65,7 +65,35 @@ idk robot buddy, timed goals might be too might pressure.
 
 ## 💡 Paste ChatGPT Snippets Here
 
-Use this section to copy helpful responses from ChatGPT during development.
+🐣 1. Tamagotchi-Like Pet (Best for Java or JS)
+✅ Easy to link: If in JavaScript, just another page or div in your interface.
+If in Java:
+
+Compile into a .jar or .class file
+
+Launch using a button that opens the program (via command line or with user instruction)
+
+For the hackathon: describe or record it in action if launching from interface is tricky
+
+🎱 2. Magic 8 Ball (Very Easy!)
+✅ Super easy to integrate
+
+If in JavaScript: embed right in your site, no problem
+
+If in Java: same as above — small standalone GUI, very quick to launch
+
+Could even make it part of the Toybox menu itself (like click the ball to get an answer!).
+
+🧱 3. Tetris (Harder)
+⚠️ Trickier, but still possible
+
+A full Tetris clone in Java or JavaScript can take time
+
+But a text-based or simplified version is doable in Java
+
+JavaScript version could be embedded easily into your UI
+
+You could also treat it like a bonus or Easter egg toy if not fully done.
 
 ---
 
