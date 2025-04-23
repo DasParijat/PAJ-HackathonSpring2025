@@ -1,0 +1,12 @@
+# ignore notepad
+notes.md
+
+# Ignore system files
+.DS_Store
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore node_modules if you ever use npm
+node_modules/
