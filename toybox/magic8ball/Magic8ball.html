@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Magic 8 Ball</title>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+        #response {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            width: 60%;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ask the Magic 8 Ball</h1>
+    <input id="question" placeholder="Type your question...">
+    <br>
+    <button onclick="shakeBall()">Ask</button>
+    <div id="response"></div>
+
+    <script>
+        const responses = [
+            "Yes, definitely.",
+            "Without a doubt.",
+            "Reply hazy, try again.",
+            "Ask again later.",
+            "Better not tell you now.",
+            "Don't count on it.",
+            "My reply is no.",
+            "Outlook not so good.",
+            "Signs point to yes.",
+            "Very doubtful.",
+            "It is certain.",
+            "Cannot predict now."
+        ];
+
+        function shakeBall() {
+            const question = document.getElementById("question").value.trim();
+            const response = document.getElementById("response");
+            if (!question.endsWith("?")) {
+                response.textContent = "Please ask a full question.";
+                return;
+            }
+            const index = Math.floor(Math.random() * responses.length);
+            response.textContent = responses[index];
+        }
+    </script>
+
+</body>
+
+</html>
