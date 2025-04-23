@@ -29,6 +29,9 @@ def interact():
     elif "food" in user_input or "feed" in user_input:
         furby_state["mood"] = "happy"
         response["message"] = "Yummy! Nom nom nom!"
+    elif "play" in user_input:
+        furby_state["mood"] = "happy"
+        response["message"] = "yo playtime is awesome"
     
     return jsonify(response)
 
