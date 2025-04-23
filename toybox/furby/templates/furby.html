@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/furby.css') }}">
     <title>Furby</title>
 </head>
-<body>
-    
-</body>
+    <body>
+        <div class="furby-container">
+            <div id="response">yo wassup</div>
+            <input type="text" id="message-input" placeholder="Say something">
+            <button onclick="talkToFurby()">Talk!</button>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/furby.js') }}"></script>
+    </body>
 </html>
