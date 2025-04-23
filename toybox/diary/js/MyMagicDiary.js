@@ -1,16 +1,12 @@
+// MyMagicDiary.js - System boot and screen output function
+//----------------------------------------
 
-function saveEntry() {
-    const text = document.getElementById("diaryText").value;
-    localStorage.setItem("diaryEntry", text);
-    alert("✅ Entry saved!");
+function updateScreen(message) {
+    const screen = document.getElementById("screenOutput");
+    screen.textContent = message;
 }
 
-function loadEntry() {
-    const saved = localStorage.getItem("diaryEntry");
-    if (saved !== null) {
-        document.getElementById("diaryText").value = saved;
-        alert("📖 Entry loaded!");
-    } else {
-        alert("📭 No entry saved yet.");
-    }
-}
+// Optional: boot directly into main menu
+window.onload = function () {
+    showMainMenu();
+};

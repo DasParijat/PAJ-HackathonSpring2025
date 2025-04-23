@@ -10,12 +10,56 @@
 <body>
     <h1>My Magic Diary</h1>
 
-    <textarea id="diaryText" rows="10" cols="40" placeholder="Dear Diary..."></textarea>
-    <br>
-    <button onclick="saveEntry()">Save</button>
-    <button onclick="loadEntry()">Load</button>
+    <!-- Screen Output (shared for all views) -->
+    <div class="screen-output" id="screenOutput">Ready.</div>
 
-    <script src="./js/MyMagicDiary.js"></script>
+    <!-- Lock Screen -->
+    <div id="lockScreen">
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="unlockDiary()">Unlock</button>
+    </div>
+
+    <!-- Setup Password -->
+    <div id="setupScreen" style="display:none;">
+        <input type="password" id="newPassword" placeholder="New password">
+        <button onclick="setPassword()">Save Password</button>
+    </div>
+
+    <!-- Diary Entry Area -->
+    <div id="diaryScreen" style="display:none;">
+        <textarea id="diaryText" rows="10" cols="40" placeholder="Diary entry here..."></textarea><br>
+        <button onclick="saveEntry()">Save</button>
+    </div>
+
+    <!-- Main Button Panel -->
+    <div id="buttonPanel">
+        <!-- Search Arrows -->
+        <div id="searchArrows">
+            <button onclick="searchUp()">SEARCH ▲</button>
+            <button onclick="searchDown()">SEARCH ▼</button>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div id="navArrows">
+            <button onclick="arrowUp()">▲</button><br>
+            <button onclick="arrowLeft()">◀</button>
+            <button onclick="arrowDown()">▼</button>
+            <button onclick="arrowRight()">▶</button>
+        </div>
+
+        <!-- EXE Button (acts as confirm/select) -->
+        <div id="exeButton">
+            <button onclick="exePress()">EXE</button>
+        </div>
+
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/diary.js"></script>
+    <script src="js/password.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/MyMagicDiary.js"></script> <!-- keep last -->
 </body>
 
 </html>
