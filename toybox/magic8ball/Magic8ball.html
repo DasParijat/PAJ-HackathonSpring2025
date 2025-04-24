@@ -60,10 +60,7 @@
         function shakeBall() {
             const question = document.getElementById("question").value.trim();
             const response = document.getElementById("response");
-            if (!question.endsWith("?")) {
-                response.textContent = "Please ask a full question.";
-                return;
-            }
+
             const index = Math.floor(Math.random() * responses.length);
             response.textContent = responses[index];
         }
