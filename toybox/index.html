@@ -2,17 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toybox</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toybox</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5dc;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Doubled size image with clickable areas -->
+  <img src="toybox-art.png" usemap="#toyMap" alt="Toybox" width="720" height="480" />
 
-    <p><a href="diary/MyMagicDiary.html" target="_blank">Launch My Magic Diary</a></p>
-    <p><a href="magic8ball/Magic8ball.html" target="_blank">Magic 8 Ball</a></p>
-    <p><a href="tamagotchi/src/tamagotchi.md" target="_blank">Play Tamagotchi</a></p>
+  <map name="toyMap">
+    <!-- Furby: centered on bottom left shelf -->
+    <area shape="rect" coords="140,300,200,370" href="furby.html" alt="Furby" />
+  
+    <!-- Dear Diary: purple box near center -->
+    <area shape="rect" coords="270,290,370,370" href="diary/MyMagicDiary.html" alt="Dear Diary" />
+  
+    <!-- Magic 8-Ball: top shelf, middle-left -->
+    <area shape="circle" coords="255,130,30" href="magic8ball/Magic8ball.html" alt="Magic 8-Ball" />
+  
+    <!-- Tamagotchi: right side of middle shelf -->
+    <area shape="circle" coords="470,200,30" href="tamagotchi/src/tamagotchi.md" alt="Tamagotchi" />
+  </map>
+  
 
+  <!-- Optional fallback links -->
+  <p><a href="diary/MyMagicDiary.html" target="_blank">Launch My Magic Diary</a></p>
+  <p><a href="magic8ball/Magic8ball.html" target="_blank">Magic 8 Ball</a></p>
+  <p><a href="tamagotchi/src/tamagotchi.md" target="_blank">Play Tamagotchi</a></p>
 </body>
 
 </html>
