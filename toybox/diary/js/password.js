@@ -27,7 +27,16 @@ function lockDiary() {
 }
 
 function unlockDiary() {
-    document.getElementById("lockScreen").style.display = "none";
-    document.getElementById("diaryScreen").style.display = "block";
-    updateDateOnScreen();
+    const input = document.getElementById("passwordInput").value;
+    const saved = localStorage.getItem("diaryPassword");
+
+    if (saved === null) {
+        updateScreen("No password set. Please set one first.");
+    } else if (input === saved) {
+        document.getElementById("lockScreen").style.display = "none";
+        document.getElementById("diaryScreen").style.display = "block";
+        updateDateOnScreen();
+    } else {
+        updateScreen("Incorrect password.");
+    }
 }
