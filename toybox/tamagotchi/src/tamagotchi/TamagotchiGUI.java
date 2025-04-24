@@ -23,6 +23,34 @@ public class TamagotchiGUI {
         frame.setSize(300, 300);
         frame.setLayout(new GridLayout(7, 1));
 
+        // Make background white like the original toy
+        frame.getContentPane().setBackground(Color.WHITE);
+
+        // Fonts for labels and face
+        Font statusFont = new Font("Monospaced", Font.PLAIN, 14);
+        Font moodFont = new Font("Monospaced", Font.BOLD, 24);
+
+        // Apply fonts to display elements
+        nameLabel.setFont(statusFont);
+        hungerLabel.setFont(statusFont);
+        happinessLabel.setFont(statusFont);
+        energyLabel.setFont(statusFont);
+        moodLabel.setFont(moodFont);
+        reactionLabel.setFont(new Font("SansSerif", Font.ITALIC, 14));
+
+        // Button styling
+        feedButton.setBackground(new Color(255, 235, 59)); // Yellow
+        playButton.setBackground(new Color(129, 212, 250)); // Light blue
+        sleepButton.setBackground(new Color(200, 230, 201)); // Light green
+
+        feedButton.setFocusPainted(false);
+        playButton.setFocusPainted(false);
+        sleepButton.setFocusPainted(false);
+
+        feedButton.setFont(new Font("SansSerif", Font.BOLD, 14));
+        playButton.setFont(new Font("SansSerif", Font.BOLD, 14));
+        sleepButton.setFont(new Font("SansSerif", Font.BOLD, 14));
+
         // Pet naming
         String name = JOptionPane.showInputDialog("Name your Tamagotchi:");
         if (name == null || name.trim().isEmpty()) {
